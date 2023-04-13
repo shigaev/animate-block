@@ -1,0 +1,81 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.animate-slider {
+  position: relative;
+  overflow: hidden;
+  height: 100px;
+}
+.animate-slider .animate-slider__item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+.animate-slider .animate-slider__item .animate-slider__slide {
+  width: 163px;
+  position: absolute;
+  left: -164px;
+  transition: 0.3s;
+}
+.animate-slider .animate-slider__item .animate-slider__slide.y {
+  width: 163px;
+  position: relative;
+  left: 0;
+}
+.animate-slider .animate-slider__item .animate-slider__slide.y:nth-child(even) {
+  bottom: 100px;
+}
+.animate-slider .animate-slider__item .animate-slider__slide.y:nth-child(odd) {
+  top: 100px;
+}
+
+.progress {
+  border: 1px solid tomato;
+  width: 0;
+  transition: 0.2s;
+}
+
+@keyframes move-animate-item {
+  from {
+    width: 100px;
+    height: 50px;
+    background-color: tomato;
+    margin: 1px;
+  }
+  50% {
+    width: 100px;
+    height: 50px;
+    background-color: tomato;
+    margin: 1px;
+  }
+  to {
+    width: 100px;
+    height: 50px;
+    background-color: tomato;
+    margin: 1px;
+    transform: translateX(870px);
+  }
+}
+.animate-wrapper {
+  position: relative;
+}
+.animate-wrapper .animate {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid tomato;
+  position: relative;
+}
+.animate-wrapper .animate__item {
+  width: 100px;
+  height: 50px;
+  background-color: tomato;
+  margin: 1px;
+}/*# sourceMappingURL=main.css.map */

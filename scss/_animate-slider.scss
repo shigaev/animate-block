@@ -1,0 +1,41 @@
+.animate-slider {
+    position: relative;
+    overflow: hidden;
+    height: 100px;
+
+    .animate-slider__item {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        position: relative;
+
+        .animate-slider__slide {
+            width: 163px;
+            position: absolute;
+            left: -164px;
+            transition: .3s;
+        }
+
+        .animate-slider__slide.y {
+            width: 163px;
+            position: relative;
+            left: 0;
+        }
+
+        // четное 
+        .animate-slider__slide.y:nth-child(even) {
+            bottom: 100px;
+        }
+
+        // нечетное
+        .animate-slider__slide.y:nth-child(odd) {
+            top: 100px;
+        }
+    }
+}
+
+.progress {
+    border: 1px solid tomato;
+    width: 0;
+    transition: .2s;
+}
